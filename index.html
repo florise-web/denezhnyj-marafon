@@ -257,6 +257,15 @@ section{padding-block:92px;position:relative}
 .testcta p{margin:6px 0 0;color:var(--muted);max-width:52ch}
 [hidden]{display:none!important}
 @media (max-width:900px){.dl-main{justify-self:center}.dl-sub,.dl-count{padding-left:0}.hero .pain{margin:0 auto}}
+
+.ladder{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;width:100%;max-width:560px;margin-top:-6px}
+.ladder .st{border:1px solid var(--line);border-radius:14px;padding:10px 8px;display:grid;gap:2px;opacity:.75}
+.ladder .st b{font-size:17px;color:var(--pearl)}
+.ladder .st span{font-size:12.5px;color:var(--muted)}
+.ladder .st.now{opacity:1;border-color:var(--gold);background:rgba(236,211,168,.14);box-shadow:0 0 24px rgba(236,211,168,.15)}
+.ladder .st.now b{color:var(--gold)}
+.ladder .st.past{opacity:.4}
+.ladder .st.past b{text-decoration:line-through}
 </style>
 </head><body>
 
@@ -275,12 +284,12 @@ section{padding-block:92px;position:relative}
     <p class="tagline">семь дней, чтобы деньги у вас задерживались</p>
     <div class="pearls l" aria-hidden="true"></div>
     <div class="dl">
-      <p class="dl-main js-dl"><b>До 7 октября:</b> закрытый эфир с Ириной 12 октября в подарок</p>
-      <p class="dl-sub">Старт 19 октября, вход закрывается в этот же день</p>
+      <p class="dl-main js-dl"><b>До 7 октября:</b> 1&nbsp;490&nbsp;₽ и закрытый эфир с Ириной 12 октября в подарок</p>
+      <p class="dl-sub js-dlsub">С 8 октября участие стоит 1&nbsp;890&nbsp;₽</p>
       <p class="dl-count js-count-hero" hidden></p>
     </div>
     <div class="cta-row">
-      <a class="btn js-bot js-cta" href="#">Принять участие <small>· 1 490 ₽</small></a>
+      <a class="btn js-bot js-cta" href="#">Принять участие <small>· <span class="js-price">1 490</span> ₽</small></a>
       <a class="btn ghost" href="#program">Программа</a>
     </div>
   </div>
@@ -415,7 +424,7 @@ section{padding-block:92px;position:relative}
         <div class="tags"><div class="tag t"><b>Формат</b>Прямой эфир, запись остается</div><div class="tag z"><b>Время</b>Полнолуние, вечер</div></div>
       </div>
     </div>
-    <div style="margin-top:36px;display:flex;justify-content:center"><a class="btn js-bot js-cta" href="#">Хочу в марафон · 1 490 ₽</a></div>
+    <div style="margin-top:36px;display:flex;justify-content:center"><a class="btn js-bot js-cta" href="#">Хочу в марафон · <span class="js-price">1 490</span> ₽</a></div>
   </div>
 </section>
 
@@ -436,7 +445,7 @@ section{padding-block:92px;position:relative}
     <div class="shead"><div class="eyebrow">Подарки</div><h2>Что вы получите <span class="gold">сверх программы</span></h2></div>
     <div class="gifts">
       <div class="gift hl"><div class="when">Сразу после оплаты</div><h3 class="gold">Денежная аудионастройка</h3><p>Слушать утром сразу после сна. Замечайте, на каких словах внутри звучит «это не про меня»: с этого места и начинается работа.</p></div>
-      <div class="gift js-until" data-until="2026-10-14"><div class="when">Для оплативших до 14 октября</div><h3>Разбор вашей ситуации</h3><p>16 октября Ирина разберет вашу денежную ситуацию в комментариях к посту, еще до старта марафона.</p></div>
+      <div class="gift js-until" data-until="2026-10-15"><div class="when">Для оплативших до 15 октября</div><h3>Разбор вашей ситуации</h3><p>16 октября Ирина разберет вашу денежную ситуацию в комментариях к посту, еще до старта марафона.</p></div>
       <div class="gift"><div class="when">После марафона</div><h3>Доступ к материалам</h3><p>Подкасты, техники и запись финального эфира остаются у вас еще на две недели.</p></div>
     </div>
   </div>
@@ -484,12 +493,17 @@ section{padding-block:92px;position:relative}
   <div class="wrap">
     <div class="pricecard">
       <div class="eyebrow">Участие</div>
-      <p class="value">В прошлый раз участницы насчитали <b>638&nbsp;500&nbsp;₽</b> новых поступлений за время марафона. Участие стоит <b>1&nbsp;490&nbsp;₽</b>, это 213&nbsp;₽ за&nbsp;день.</p>
-      <div class="sum gold">1 490 <small>₽</small></div>
+      <p class="value">В прошлый раз участницы насчитали <b>638&nbsp;500&nbsp;₽</b> новых поступлений за время марафона. Участие сейчас стоит <b><span class="js-price">1 490</span>&nbsp;₽</b>, это <span class="js-perday">213</span>&nbsp;₽ за&nbsp;день.</p>
+      <div class="sum gold"><span class="js-price">1 490</span> <small>₽</small></div>
+      <div class="ladder" aria-label="Цена по датам">
+        <div class="st" data-to="2026-10-07"><b>1 490 ₽</b><span>до 7 октября</span></div>
+        <div class="st" data-to="2026-10-15"><b>1 890 ₽</b><span>8–15 октября</span></div>
+        <div class="st" data-to="2099-12-31"><b>2 290 ₽</b><span>с 16 октября</span></div>
+      </div>
       <p class="count js-count" hidden></p>
       <div class="bonus">
         <p class="js-until" data-until="2026-10-07"><b>До 7 октября:</b> закрытый эфир с Ириной 12 октября в подарок</p>
-        <p class="js-until" data-until="2026-10-14"><b>До 14 октября:</b> разбор вашей денежной ситуации в комментариях к посту 16 октября</p>
+        <p class="js-until" data-until="2026-10-15"><b>До 15 октября:</b> разбор вашей денежной ситуации в комментариях к посту 16 октября</p>
       </div>
       <div class="pearls"></div>
       <ul class="incl">
@@ -501,10 +515,10 @@ section{padding-block:92px;position:relative}
         <li>Доступ к материалам еще две недели после финала</li>
       </ul>
       <p class="real">Подкаст дня можно слушать в дороге или за готовкой, задание занимает 30–40 минут вечером. Все семь дней и запись финального эфира остаются у вас еще две недели после окончания.</p>
-      <a class="btn wide js-bot js-cta" href="#">Принять участие · 1 490 ₽</a>
+      <a class="btn wide js-bot js-cta" href="#">Принять участие · <span class="js-price">1 490</span> ₽</a>
       <p class="pay">Оплата картой любого банка и по СБП. Если платеж не проходит, напишите <a class="js-care" href="#">@florise_irina</a>, решим за пять минут.</p>
       <p class="friend">Идете вдвоем? Второе место за 990 ₽. <a class="js-care" href="#">Напишите нам</a>, пришлем ссылку.</p>
-      <p class="note">Старт 19 октября, вход закрывается в этот же день. Дальше группа идет вместе, день за днем.</p>
+      <p class="note">Старт 19 октября. Можно зайти и после старта: пройденные дни остаются в записи.</p>
     </div>
   </div>
 </section>
@@ -516,7 +530,7 @@ section{padding-block:92px;position:relative}
       <details><summary>Это очередной марафон с аффирмациями?</summary><p>Техники в марафоне есть, и они работают. Но каждая идет вместе с объяснением, какой блок она трогает и почему. Без понимания практика остается ритуалом, с пониманием она меняет то, как вы обращаетесь с деньгами.</p></details>
       <details><summary>Я уже пробовала, и не помогло</summary><p>Обычно не помогает то, что делаешь урывками и без разбора своей ситуации. Здесь вы начинаете с честной точки А в цифрах, а Ирина отвечает на ваши вопросы голосом. Разница становится видна уже по заданиям первого дня.</p></details>
       <details><summary>У меня совсем нет времени</summary><p>Подкасты дня можно слушать в дороге или за готовкой. Задание небольшое, его реально сделать вечером после работы.</p></details>
-      <details><summary>Сейчас нет денег на жизнь, какой уж тут марафон</summary><p>Именно поэтому участие стоит 1 490 ₽. Ирина всегда говорит: вы платите не мне, вы платите себе, за то, чтобы перестать жить в долг у самой себя.</p></details>
+      <details><summary>Сейчас нет денег на жизнь, какой уж тут марафон</summary><p>Именно поэтому участие стоит от 1 490 ₽, и чем раньше вы решаете, тем дешевле. Ирина всегда говорит: вы платите не мне, вы платите себе, за то, чтобы перестать жить в долг у самой себя.</p></details>
       <details><summary>Боюсь, что не доведу до конца</summary><p>Марафон короткий, семь дней, а после финала материалы остаются еще на две недели. Можно догнать в своем темпе.</p></details>
       <details><summary>Если я не смогу на эфир вживую?</summary><p>Запись эфира останется в канале, посмотрите в удобное время.</p></details>
       <details><summary>Как попасть в канал после оплаты?</summary><p>Бот сразу пришлет личную ссылку на вход и аудионастройку в подарок.</p></details>
@@ -552,7 +566,6 @@ section{padding-block:92px;position:relative}
     </div>
     <div class="foot-col">
       <a href="https://t.me/florise_irina" target="_blank" rel="noopener">Поддержка в Telegram @florise_irina</a>
-      <a href="https://instagram.com/irina_florise" target="_blank" rel="noopener">Instagram @irina_florise</a>
       <a href="https://t.me/peoplenewtning" target="_blank" rel="noopener">Telegram-канал</a>
     </div>
     <div class="foot-col">
@@ -563,7 +576,7 @@ section{padding-block:92px;position:relative}
   </div>
 </footer>
 <div class="lb" id="lb" role="dialog" aria-label="Отзыв крупно"><img alt=""></div>
-<div class="sticky"><a class="btn js-bot js-cta" href="#">Принять участие · 1 490 ₽</a></div>
+<div class="sticky"><a class="btn js-bot js-cta" href="#">Принять участие · <span class="js-price">1 490</span> ₽</a></div>
 </div>
 
 <script>
@@ -576,12 +589,19 @@ section{padding-block:92px;position:relative}
   var msk=new Date(Date.now()+ (new Date().getTimezoneOffset()+180)*60000);
   var today=msk.getFullYear()+'-'+String(msk.getMonth()+1).padStart(2,'0')+'-'+String(msk.getDate()).padStart(2,'0');
   document.querySelectorAll('.js-until').forEach(function(el){if(today>el.getAttribute('data-until'))el.hidden=true;});
-  var dl=document.querySelector('.js-dl');
-  if(today>'2026-10-14'){dl.innerHTML='<b>Старт 19 октября.</b> Вход закрывается в этот же день';dl.nextElementSibling.hidden=true;}
-  else if(today>'2026-10-07'){dl.innerHTML='<b>До 14 октября:</b> разбор вашей денежной ситуации 16 октября в подарок';}
+  // ЛЕСЕНКА: 1 490 до 7.10, 1 890 с 8 по 15.10, 2 290 с 16.10
+  var price=today<='2026-10-07'?1490:(today<='2026-10-15'?1890:2290);
+  var fmt=function(n){return String(n).replace(/\B(?=(\d{3})+(?!\d))/g,' ');};
+  document.querySelectorAll('.js-price').forEach(function(e){e.textContent=fmt(price);});
+  document.querySelectorAll('.js-perday').forEach(function(e){e.textContent=Math.round(price/7);});
+  var st=document.querySelectorAll('.ladder .st'),cur=false;
+  st.forEach(function(e){var to=e.getAttribute('data-to');if(today>to)e.classList.add('past');else if(!cur){e.classList.add('now');cur=true;}});
+  var dl=document.querySelector('.js-dl'),dls=document.querySelector('.js-dlsub');
+  if(today>'2026-10-15'){dl.innerHTML=today<'2026-10-19'?'<b>Старт 19 октября</b>':'<b>Марафон уже идет</b>, можно присоединиться';dls.textContent='Пройденные дни остаются в записи, догоните в своем темпе';}
+  else if(today>'2026-10-07'){dl.innerHTML='<b>До 15 октября:</b> 1&nbsp;890&nbsp;₽ и разбор вашей денежной ситуации 16 октября в подарок';dls.innerHTML='С 16 октября участие стоит 2&nbsp;290&nbsp;₽';}
   var ctaTxt=null;
   if(today==='2026-10-06'||today==='2026-10-07')ctaTxt='Успеть до 7 октября · 1 490 ₽';
-  else if(today==='2026-10-13'||today==='2026-10-14')ctaTxt='Успеть до 14 октября · 1 490 ₽';
+  else if(today==='2026-10-14'||today==='2026-10-15')ctaTxt='Успеть до 15 октября · 1 890 ₽';
   if(ctaTxt)document.querySelectorAll('.js-cta').forEach(function(a){a.textContent=ctaTxt;});
   var cnt=parseInt(page.getAttribute('data-count'),10)||0;
   if(cnt>=50){var c1=document.querySelector('.js-count');c1.textContent='Нас уже '+cnt;c1.hidden=false;}
