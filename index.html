@@ -54,6 +54,7 @@ section{padding-block:92px;position:relative}
 #dust{position:absolute;inset:0;width:100%;height:100%;z-index:-1;pointer-events:none}
 .hero-in{display:grid;justify-items:start;gap:20px;width:100%}
 .hero-in>*{max-width:560px}
+.hero-in>.cta-row{max-width:none}
 .hero h1{font-family:var(--display);font-weight:700;font-size:clamp(52px,7vw,92px);line-height:.95;letter-spacing:.02em;filter:drop-shadow(0 4px 20px rgba(0,0,0,.5))}
 .hero h1 .it{display:block;font-size:.62em;line-height:1.1;margin-top:10px;color:var(--pearl);-webkit-text-fill-color:var(--pearl)}
 .dates{display:flex;flex-wrap:wrap;gap:10px}
@@ -227,29 +228,59 @@ section{padding-block:92px;position:relative}
   .moon,.quotes,.format{grid-template-columns:1fr}
   .q{font-size:20px}
   .btn{padding:18px 24px;font-size:14px}
-  .cta-row .btn{width:100%}
+  .cta-row .btn,.testcta .btn{width:100%}
   .fit>div{padding:26px 22px}
   .stats{gap:28px}
 }
 @media (prefers-reduced-motion:reduce){.btn,.day{transition:none}}
+
+.hero .pain{margin:0;font-size:clamp(20px,2.2vw,24px);line-height:1.4;font-weight:500;color:var(--pearl);max-width:30ch}
+.hero .tagline{margin:-4px 0 0;font-family:var(--serif);font-style:italic;font-size:clamp(22px,2.6vw,28px);color:var(--gold)}
+.dl{display:grid;gap:6px}
+.dl p{margin:0}
+.dl-main{display:inline-block;justify-self:start;background:rgba(236,211,168,.12);border:1px solid var(--line2);border-radius:14px;padding:10px 16px;font-size:16px}
+.dl-main b{color:var(--gold)}
+.dl-sub{font-size:14.5px;color:var(--muted);padding-left:4px}
+.dl-count{font-size:14.5px;color:var(--gold);padding-left:4px;font-weight:600}
+.value{margin:0;max-width:52ch;color:var(--pearl);font-size:17px}
+.value b{color:var(--gold)}
+.count{margin:-6px 0 0;font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:14px;color:var(--gold)}
+.bonus{display:grid;gap:8px;width:100%;max-width:600px}
+.bonus p{margin:0;background:rgba(236,211,168,.1);border:1px solid var(--line2);border-radius:14px;padding:12px 16px;font-size:15.5px}
+.bonus b{color:var(--gold)}
+.real{margin:0;max-width:58ch;color:var(--muted);font-size:15.5px}
+.pay,.friend{margin:0;font-size:14px;color:var(--muted);max-width:52ch}
+.pay a,.friend a{color:var(--gold)}
+.friend{font-size:15px;color:var(--pearl)}
+.testcta{display:flex;gap:24px;justify-content:space-between;align-items:center;flex-wrap:wrap;border:1px solid var(--line2);border-radius:28px;padding:34px 36px;background:linear-gradient(135deg,rgba(236,211,168,.12),rgba(138,35,56,.35))}
+.testcta h3{font-family:var(--display);font-size:32px;color:var(--gold)}
+.testcta p{margin:6px 0 0;color:var(--muted);max-width:52ch}
+[hidden]{display:none!important}
+@media (max-width:900px){.dl-main{justify-self:center}.dl-sub,.dl-count{padding-left:0}.hero .pain{margin:0 auto}}
 </style>
 </head><body>
 
 
 <!-- ССЫЛКИ МЕНЯТЬ ЗДЕСЬ: data-bot (бот марафона), data-care (аккаунт команды) -->
-<div id="page" data-bot="https://t.me/BOT_MARAFONA" data-care="https://t.me/florise_irina">
+<!-- data-count: сколько уже оплатили, обновлять руками раз в 2-3 дня. Меньше 50 не показывается, больше 200 выходит на первый экран -->
+<div id="page" data-bot="https://t.me/BOT_MARAFONA" data-care="https://t.me/florise_irina" data-test="https://florise-web.github.io/denezhnyj-test/" data-count="0">
 
 <header class="hero">
   <div class="hero-img" role="img" aria-label="Ирина Гребенюкова в бордовом бархатном платье, вокруг падают купюры"></div>
   <canvas id="dust" aria-hidden="true"></canvas>
   <div class="wrap hero-in">
     <div class="eyebrow">Ирина Гребенюкова</div>
-    <h1 class="gold">Денежный марафон<span class="it">семь дней, чтобы деньги у вас задерживались</span></h1>
+    <h1 class="gold">Денежный марафон</h1>
+    <p class="pain">Работаете больше, а денег столько же. И каждый раз, когда выходите выше, что-то случается.</p>
+    <p class="tagline">семь дней, чтобы деньги у вас задерживались</p>
     <div class="pearls l" aria-hidden="true"></div>
-    <div class="dates"><span><b>19–25</b> октября</span><span>по растущей луне</span><span><b>26.10</b> эфир в полнолуние</span></div>
-    <p class="sub">Этот марафон не про усилия и достигаторство, а про то, <b>почему деньги сверх привычной суммы уходят</b>, и как расширить свою денежную емкость</p>
+    <div class="dl">
+      <p class="dl-main js-dl"><b>До 7 октября:</b> закрытый эфир с Ириной 12 октября в подарок</p>
+      <p class="dl-sub">Старт 19 октября, вход закрывается в этот же день</p>
+      <p class="dl-count js-count-hero" hidden></p>
+    </div>
     <div class="cta-row">
-      <a class="btn js-bot" href="#">Принять участие <small>· 1 490 ₽</small></a>
+      <a class="btn js-bot js-cta" href="#">Принять участие <small>· 1 490 ₽</small></a>
       <a class="btn ghost" href="#program">Программа</a>
     </div>
   </div>
@@ -380,11 +411,11 @@ section{padding-block:92px;position:relative}
       </div>
       <div class="day fin">
         <div class="num"><b class="gold">◯</b><span>26 октября</span></div>
-        <div><h3 class="gold">Денежный урожай</h3><p class="ask">«Что со мной произошло за эти дни?»</p><p>Живой эфир с Ириной в полнолуние: практика на денежные блоки прямо в моменте, общий итог «денежного дождя» и ответы на вопросы.</p></div>
+        <div><h3 class="gold">Денежный урожай</h3><p class="ask">«Что со мной произошло за эти дни?»</p><p>Живой эфир с Ириной в полнолуние: практика на денежные блоки прямо в моменте, общий итог «денежного дождя», ответы на вопросы и что со всем этим делать дальше.</p></div>
         <div class="tags"><div class="tag t"><b>Формат</b>Прямой эфир, запись остается</div><div class="tag z"><b>Время</b>Полнолуние, вечер</div></div>
       </div>
     </div>
-    <div style="margin-top:36px;display:flex;justify-content:center"><a class="btn js-bot" href="#">Хочу в марафон · 1 490 ₽</a></div>
+    <div style="margin-top:36px;display:flex;justify-content:center"><a class="btn js-bot js-cta" href="#">Хочу в марафон · 1 490 ₽</a></div>
   </div>
 </section>
 
@@ -405,7 +436,7 @@ section{padding-block:92px;position:relative}
     <div class="shead"><div class="eyebrow">Подарки</div><h2>Что вы получите <span class="gold">сверх программы</span></h2></div>
     <div class="gifts">
       <div class="gift hl"><div class="when">Сразу после оплаты</div><h3 class="gold">Денежная аудионастройка</h3><p>Слушать утром сразу после сна. Замечайте, на каких словах внутри звучит «это не про меня»: с этого места и начинается работа.</p></div>
-      <div class="gift"><div class="when">Для оплативших до 7 октября</div><h3>Закрытый эфир 12.10</h3><p>Ирина ответит на ваши денежные вопросы еще до старта марафона.</p></div>
+      <div class="gift js-until" data-until="2026-10-14"><div class="when">Для оплативших до 14 октября</div><h3>Разбор вашей ситуации</h3><p>16 октября Ирина разберет вашу денежную ситуацию в комментариях к посту, еще до старта марафона.</p></div>
       <div class="gift"><div class="when">После марафона</div><h3>Доступ к материалам</h3><p>Подкасты, техники и запись финального эфира остаются у вас еще на две недели.</p></div>
     </div>
   </div>
@@ -453,7 +484,13 @@ section{padding-block:92px;position:relative}
   <div class="wrap">
     <div class="pricecard">
       <div class="eyebrow">Участие</div>
+      <p class="value">В прошлый раз участницы насчитали <b>638&nbsp;500&nbsp;₽</b> новых поступлений за время марафона. Участие стоит <b>1&nbsp;490&nbsp;₽</b>, это 213&nbsp;₽ за&nbsp;день.</p>
       <div class="sum gold">1 490 <small>₽</small></div>
+      <p class="count js-count" hidden></p>
+      <div class="bonus">
+        <p class="js-until" data-until="2026-10-07"><b>До 7 октября:</b> закрытый эфир с Ириной 12 октября в подарок</p>
+        <p class="js-until" data-until="2026-10-14"><b>До 14 октября:</b> разбор вашей денежной ситуации в комментариях к посту 16 октября</p>
+      </div>
       <div class="pearls"></div>
       <ul class="incl">
         <li>Подготовка с момента оплаты до новолуния</li>
@@ -463,8 +500,11 @@ section{padding-block:92px;position:relative}
         <li>Денежная аудионастройка сразу после оплаты</li>
         <li>Доступ к материалам еще две недели после финала</li>
       </ul>
-      <a class="btn wide js-bot" href="#">Принять участие</a>
-      <p class="note">Вход открыт до 19 октября. Дальше группа идет вместе, день за днем, и канал закрывается.</p>
+      <p class="real">Подкаст дня можно слушать в дороге или за готовкой, задание занимает 30–40 минут вечером. Все семь дней и запись финального эфира остаются у вас еще две недели после окончания.</p>
+      <a class="btn wide js-bot js-cta" href="#">Принять участие · 1 490 ₽</a>
+      <p class="pay">Оплата картой любого банка и по СБП. Если платеж не проходит, напишите <a class="js-care" href="#">@florise_irina</a>, решим за пять минут.</p>
+      <p class="friend">Идете вдвоем? Второе место за 990 ₽. <a class="js-care" href="#">Напишите нам</a>, пришлем ссылку.</p>
+      <p class="note">Старт 19 октября, вход закрывается в этот же день. Дальше группа идет вместе, день за днем.</p>
     </div>
   </div>
 </section>
@@ -480,6 +520,15 @@ section{padding-block:92px;position:relative}
       <details><summary>Боюсь, что не доведу до конца</summary><p>Марафон короткий, семь дней, а после финала материалы остаются еще на две недели. Можно догнать в своем темпе.</p></details>
       <details><summary>Если я не смогу на эфир вживую?</summary><p>Запись эфира останется в канале, посмотрите в удобное время.</p></details>
       <details><summary>Как попасть в канал после оплаты?</summary><p>Бот сразу пришлет личную ссылку на вход и аудионастройку в подарок.</p></details>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="testcta">
+      <div><h3>Пока не готовы?</h3><p>Пройдите денежный тест и узнайте, на каком вы уровне финансовой безопасности. Четыре минуты, бесплатно.</p></div>
+      <a class="btn js-test" href="#">Пройти денежный&nbsp;тест&nbsp;→</a>
     </div>
   </div>
 </section>
@@ -514,7 +563,7 @@ section{padding-block:92px;position:relative}
   </div>
 </footer>
 <div class="lb" id="lb" role="dialog" aria-label="Отзыв крупно"><img alt=""></div>
-<div class="sticky"><a class="btn js-bot" href="#">Принять участие · 1 490 ₽</a></div>
+<div class="sticky"><a class="btn js-bot js-cta" href="#">Принять участие · 1 490 ₽</a></div>
 </div>
 
 <script>
@@ -523,6 +572,23 @@ section{padding-block:92px;position:relative}
   var bot=page.getAttribute('data-bot'),care=page.getAttribute('data-care');
   document.querySelectorAll('.js-bot').forEach(function(a){a.href=bot;a.target='_blank';a.rel='noopener';});
   document.querySelectorAll('.js-care').forEach(function(a){a.href=care;a.target='_blank';a.rel='noopener';});
+  // ДЕДЛАЙНЫ И СЧЕТЧИК: считаются по московскому времени
+  var msk=new Date(Date.now()+ (new Date().getTimezoneOffset()+180)*60000);
+  var today=msk.getFullYear()+'-'+String(msk.getMonth()+1).padStart(2,'0')+'-'+String(msk.getDate()).padStart(2,'0');
+  document.querySelectorAll('.js-until').forEach(function(el){if(today>el.getAttribute('data-until'))el.hidden=true;});
+  var dl=document.querySelector('.js-dl');
+  if(today>'2026-10-14'){dl.innerHTML='<b>Старт 19 октября.</b> Вход закрывается в этот же день';dl.nextElementSibling.hidden=true;}
+  else if(today>'2026-10-07'){dl.innerHTML='<b>До 14 октября:</b> разбор вашей денежной ситуации 16 октября в подарок';}
+  var ctaTxt=null;
+  if(today==='2026-10-06'||today==='2026-10-07')ctaTxt='Успеть до 7 октября · 1 490 ₽';
+  else if(today==='2026-10-13'||today==='2026-10-14')ctaTxt='Успеть до 14 октября · 1 490 ₽';
+  if(ctaTxt)document.querySelectorAll('.js-cta').forEach(function(a){a.textContent=ctaTxt;});
+  var cnt=parseInt(page.getAttribute('data-count'),10)||0;
+  if(cnt>=50){var c1=document.querySelector('.js-count');c1.textContent='Нас уже '+cnt;c1.hidden=false;}
+  if(cnt>200){var c2=document.querySelector('.js-count-hero');c2.textContent='Нас уже '+cnt;c2.hidden=false;}
+  var testUrl=page.getAttribute('data-test');
+  document.querySelectorAll('.js-test').forEach(function(a){a.href=testUrl;a.target='_blank';a.rel='noopener';});
+
 
   var lb=document.getElementById('lb');document.querySelectorAll('.cards img').forEach(function(im){im.parentNode.addEventListener('click',function(){lb.querySelector('img').src=im.src;lb.querySelector('img').alt=im.alt;lb.classList.add('on');});});lb.addEventListener('click',function(){lb.classList.remove('on');});document.addEventListener('keydown',function(e){if(e.key==='Escape')lb.classList.remove('on');});
 
