@@ -328,6 +328,10 @@ section{padding-block:92px;position:relative}
 .ab p b{color:var(--gold);font-weight:600}
 .stats>div{background:rgba(236,211,168,.08);border:1px solid var(--line2);border-radius:18px;padding:14px 20px}
 .stats{border-top:0!important;padding-top:6px!important;gap:12px!important}
+
+.moment{margin:22px auto 0;max-width:640px;text-align:center;background:linear-gradient(135deg,rgba(236,211,168,.16),rgba(138,35,56,.35));border:1px solid var(--gold);border-radius:18px;padding:16px 20px;font-size:16px;color:var(--pearl)}
+.moment b{color:var(--gold);display:block;font-size:18px;margin-bottom:2px}
+.pricecard .moment{margin:0}
 </style>
 </head><body>
 
@@ -1003,10 +1007,11 @@ section{padding-block:92px;position:relative}
     </figure>
     <div class="stages">
       <div class="stage"><div class="st-d">1–9 октября</div><h3>Убывающая луна</h3><p>Работа с пространством, создаем денежное поле</p></div>
-      <div class="stage hl"><div class="st-d">10 октября, 18:50</div><h3>Денежное новолуние</h3><p>В новый ход луны, когда активируются денежные энергии, ставим денежную цель в определенное время</p><div class="st-tag">Старт марафона</div></div>
+      <div class="stage hl"><div class="st-d">10 октября</div><h3>Денежное новолуние</h3><p>Денежное новолуние в 18:50: в новый ход луны, когда активируются денежные энергии, ставим денежную цель в определенное время</p><div class="st-tag">Старт марафона</div></div>
       <div class="stage"><div class="st-d">11–17 октября</div><h3>Растущая луна</h3><p>Семь дней активной работы с деньгами и денежной энергией. Практики и техники, направленные на приумножение и увеличение денег</p></div>
       <div class="stage fin"><div class="st-d">18 октября</div><h3 class="gold">Денежный урожай</h3><p>Живой эфир с Ириной + энергетическая практика «Денежный урожай». Подведение итогов, сколько заработал весь марафон</p><div class="st-tag">Прямой эфир, запись остается</div></div>
     </div>
+    <p class="moment"><b>10 октября будьте в канале к 18:50.</b> В эту минуту ставим денежную цель, второй раз этот момент не повторится.</p>
     <div class="prog-cta"><a class="btn js-bot js-cta" href="https://peoplenewtning.getplatinum.ru/payment/Zf0dOyv" target="_blank" rel="noopener">Принять участие · 1 490 ₽</a><p class="pay pay-u">Оплата картой любого банка и по СБП. Если платеж не проходит, напишите <a class="js-care" href="https://t.me/florise_irina" target="_blank" rel="noopener">@florise_irina</a>, решим за пять минут.</p></div>
   </div>
 </section>
@@ -1154,17 +1159,18 @@ section{padding-block:92px;position:relative}
       <div class="pearls"></div>
       <ul class="incl">
         <li>Старт 10 октября, в денежное новолуние</li>
-        <li>Постановка денежной цели в 18:50, в первые минуты новолуния</li>
+        <li>Постановка денежной цели 10 октября в 18:50, в момент новолуния</li>
         <li>7 дней подкастов, техник и практик на растущей луне</li>
         <li>Финальный эфир «Денежный урожай» 18 октября</li>
         <li>Денежная аудионастройка сразу после оплаты</li>
         <li>Доступ к материалам еще две недели после финала</li>
       </ul>
       <p class="real">Подкаст дня можно слушать в дороге, на задания нужно 5–10 минут в день. Все материалы и запись финального эфира остаются у вас еще две недели после окончания.</p>
+      <p class="moment"><b>10 октября будьте в канале к 18:50.</b> В эту минуту ставим денежную цель, второй раз этот момент не повторится.</p>
       <a class="btn wide js-bot js-cta" href="https://peoplenewtning.getplatinum.ru/payment/Zf0dOyv" target="_blank" rel="noopener">Принять участие · 1 490 ₽</a>
       <p class="pay">Оплата картой любого банка и по СБП. Если платеж не проходит, напишите <a class="js-care" href="https://t.me/florise_irina" target="_blank" rel="noopener">@florise_irina</a>, решим за пять минут.</p>
       <p class="friend">Идете вдвоем? Второе место за 990 ₽. <a class="js-care" href="https://t.me/florise_irina" target="_blank" rel="noopener">Напишите нам</a>, пришлем ссылку.</p>
-      <p class="note">Старт 10 октября. Можно присоединиться и после старта: пройденные дни остаются в записи.</p>
+      <p class="note">Старт 10 октября.</p>
     </div>
   </div>
 </section>
@@ -1237,7 +1243,7 @@ section{padding-block:92px;position:relative}
   document.querySelectorAll('.js-until').forEach(function(el){if(today>el.getAttribute('data-until'))el.hidden=true;});
   var dl=document.querySelector('.js-dl');
   if(today>'2026-10-07'&&today<'2026-10-10'){dl.innerHTML='<b>1&nbsp;490&nbsp;₽</b>, старт в денежное новолуние 10 октября';}
-  else if(today>='2026-10-10'){dl.innerHTML=today<'2026-10-18'?'<b>Марафон уже идет</b>, можно присоединиться: пройденные дни в записи':'<b>Марафон завершен</b>';}
+  else if(today>='2026-10-10'){dl.innerHTML=today==='2026-10-10'?'<b>Сегодня старт.</b> Будьте в канале к 18:50':(today<'2026-10-18'?'<b>Марафон идет</b>':'<b>Марафон завершен</b>');}
   if(today==='2026-10-06'||today==='2026-10-07')document.querySelectorAll('.js-cta').forEach(function(a){a.textContent='Успеть до 7 октября · 1 490 ₽';});
   var cnt=parseInt(page.getAttribute('data-count'),10)||0;
   if(cnt>=50){var c1=document.querySelector('.js-count');c1.textContent='Нас уже '+cnt;c1.hidden=false;}
