@@ -318,6 +318,16 @@ section{padding-block:92px;position:relative}
 .band-l .c b{font-size:clamp(18px,3.2vw,34px);color:#fff3d6}
 
 .pearls{background-repeat:space no-repeat!important}
+
+.abox{display:grid;gap:12px;margin:4px 0 6px}
+.ab{display:grid;grid-template-columns:44px 1fr;gap:14px;align-items:start;background:var(--card);border:1px solid var(--line2);border-radius:20px;padding:18px 20px;position:relative;overflow:hidden}
+.ab::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:linear-gradient(180deg,#fff6e8,#c9a06a)}
+.ab-i{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:radial-gradient(circle at 35% 30%,#fff 0,#f3e8dc 35%,#cdb9aa 80%);color:#6d1a2c;font-size:20px;box-shadow:0 0 16px rgba(255,240,225,.3)}
+.ab h4{margin:0 0 4px;font-family:var(--display);font-size:22px;color:var(--gold);font-weight:600}
+.ab p{margin:0!important;color:var(--pearl)!important;font-size:15.5px}
+.ab p b{color:var(--gold);font-weight:600}
+.stats>div{background:rgba(236,211,168,.08);border:1px solid var(--line2);border-radius:18px;padding:14px 20px}
+.stats{border-top:0!important;padding-top:6px!important;gap:12px!important}
 </style>
 </head><body>
 
@@ -1120,8 +1130,10 @@ section{padding-block:92px;position:relative}
       <div class="eyebrow">Кто ведет</div>
       <h2 class="gold">Ирина Гребенюкова</h2>
       <blockquote>«Вы платите не мне. Вы платите себе»</blockquote>
-      <p>Ирина работает с подсознанием и денежными сценариями много лет. Когда-то она работала в найме и мечтала о большем доходе, мечтала жить у моря, построить счастливые отношения и наслаждаться жизнью: сегодня это ее реальность!</p>
-      <p>Ирина не просто теоретик: она настоящий практик, который сам показывает свои невероятные результаты каждый день благодаря своим элементарным техникам и практикам.</p>
+      <div class="abox">
+        <div class="ab"><div class="ab-i">✦</div><div><h4>Путь Ирины</h4><p>Ирина работает с подсознанием и денежными сценариями много лет. Когда-то она работала в найме и мечтала о большем доходе, мечтала жить у моря, построить счастливые отношения и наслаждаться жизнью: <b>сегодня это ее реальность!</b></p></div></div>
+        <div class="ab"><div class="ab-i">◈</div><div><h4>Практик, а не теоретик</h4><p>Ирина не просто теоретик: она настоящий практик, который сам показывает свои <b>невероятные результаты каждый день</b> благодаря своим элементарным техникам и практикам.</p></div></div>
+      </div>
       <div class="stats"><div><b class="gold">7</b><span>лет практики</span></div><div><b class="gold">2000+</b><span>человек прошли трансформации Ирины</span></div></div>
     </div>
   </div>
