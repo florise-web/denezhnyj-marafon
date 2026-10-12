@@ -1,5 +1,5 @@
 <!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><!--fresh--><meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"><meta http-equiv="Pragma" content="no-cache"><meta http-equiv="Expires" content="0">
-<script>(function(){var V="20261012183333";function chk(){try{fetch("version.txt?t="+Date.now(),{cache:"no-store"}).then(function(r){return r.ok?r.text():""}).then(function(t){t=(t||"").trim();if(!t||t===V)return;var k="fr_"+t;try{if(sessionStorage.getItem(k))return;sessionStorage.setItem(k,1)}catch(e){}var u=new URL(location.href);u.searchParams.set("v",t);location.replace(u.toString())}).catch(function(){})}catch(e){}}chk();document.addEventListener("visibilitychange",function(){if(!document.hidden)chk()});window.addEventListener("pageshow",function(e){if(e.persisted)chk()})})();</script><!--/fresh-->
+<script>(function(){var V="20261012214147";function chk(){try{fetch("version.txt?t="+Date.now(),{cache:"no-store"}).then(function(r){return r.ok?r.text():""}).then(function(t){t=(t||"").trim();if(!t||t===V)return;var k="fr_"+t;try{if(sessionStorage.getItem(k))return;sessionStorage.setItem(k,1)}catch(e){}var u=new URL(location.href);u.searchParams.set("v",t);location.replace(u.toString())}).catch(function(){})}catch(e){}}chk();document.addEventListener("visibilitychange",function(){if(!document.hidden)chk()});window.addEventListener("pageshow",function(e){if(e.persisted)chk()})})();</script><!--/fresh-->
 <meta name="theme-color" content="#240610">
 <title>Денежный практикум Ирины Гребенюковой</title>
 <meta name="description" content="Неделя с Ириной Гребенюковой, чтоб научиться сохранять и приумножать доход. Практикум 19–25 октября, финальный эфир 26 октября.">
@@ -334,6 +334,15 @@ section{padding-block:92px;position:relative}
 .moment{margin:22px auto 0;max-width:640px;text-align:center;background:linear-gradient(135deg,rgba(236,211,168,.16),rgba(138,35,56,.35));border:1px solid var(--gold);border-radius:18px;padding:16px 20px;font-size:16px;color:var(--pearl)}
 .moment b{color:var(--gold);display:block;font-size:18px;margin-bottom:2px}
 .pricecard .moment{margin:0}
+.paym{position:fixed;inset:0;z-index:200;display:none;align-items:center;justify-content:center;padding:20px;background:rgba(12,2,6,.72);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+.paym.on{display:flex}
+.paym-box{position:relative;width:100%;max-width:440px;padding:40px 28px 30px;border-radius:28px;background:linear-gradient(170deg,#3a0c1c,#240610);box-shadow:inset 0 0 0 1px var(--line2),0 30px 80px rgba(0,0,0,.5);text-align:center}
+.paym-box h3{margin:0 0 6px;font-family:var(--serif);font-weight:500;font-size:34px;line-height:1.2;color:var(--pearl)}
+.paym-box p{margin:0 0 24px;color:var(--muted);font-size:15px}
+.paym-box .btn{display:flex;width:100%;justify-content:center;margin-top:12px}
+.paym-x{position:absolute;top:12px;right:16px;background:none;border:0;color:var(--muted);font-size:30px;line-height:1;cursor:pointer}
+.paym-box .paym-note{margin:18px 0 0;font-size:13px}
+.paym-note a{color:var(--gold)}
 </style>
 
 <!-- ССЫЛКИ МЕНЯТЬ ЗДЕСЬ: data-bot (ссылка на оплату, дублируется в href кнопок «Принять участие»), data-care (аккаунт команды) -->
@@ -356,7 +365,7 @@ section{padding-block:92px;position:relative}
       <a class="btn js-bot js-cta" href="https://peoplenewtning.getplatinum.ru/payment/Zf0dOyv" target="_blank" rel="noopener">Принять участие <small>· 1 490 ₽</small></a>
       <a class="btn ghost" href="#program">Программа</a>
     </div>
-    <p class="pay pay-u">Оплата картой любого банка и по СБП. Если платеж не проходит, напишите <a class="js-care" href="https://t.me/florise_irina" target="_blank" rel="noopener">@florise_irina</a>, решим за пять минут.<span class="js-tribw"> Удобнее в Telegram? <a class="js-trib" href="https://web.tribute.tg/p/GMQ" target="_blank" rel="noopener">Оплатить через Tribute</a>.</span></p>
+    <p class="pay pay-u">Оплата картой любого банка и по СБП. Если платеж не проходит, напишите <a class="js-care" href="https://t.me/florise_irina" target="_blank" rel="noopener">@florise_irina</a>, решим за пять минут.</p>
   </div>
 </header>
 
@@ -370,7 +379,7 @@ section{padding-block:92px;position:relative}
       <div class="stage fin"><div class="st-d">26 октября</div><h3 class="gold">Денежный урожай</h3><p>Живой эфир с Ириной + энергетическая практика «Денежный урожай». Подведение итогов, сколько заработал весь практикум</p><div class="st-tag">Прямой эфир, запись остается</div></div>
     </div>
     <p class="moment"><b>Подготовка начинается сразу после оплаты.</b> Кто заходит раньше, тот приходит к 19 октября уже подготовленным.</p>
-    <div class="prog-cta"><a class="btn js-bot js-cta" href="https://peoplenewtning.getplatinum.ru/payment/Zf0dOyv" target="_blank" rel="noopener">Принять участие · 1 490 ₽</a><p class="pay pay-u">Оплата картой любого банка и по СБП. Если платеж не проходит, напишите <a class="js-care" href="https://t.me/florise_irina" target="_blank" rel="noopener">@florise_irina</a>, решим за пять минут.<span class="js-tribw"> Удобнее в Telegram? <a class="js-trib" href="https://web.tribute.tg/p/GMQ" target="_blank" rel="noopener">Оплатить через Tribute</a>.</span></p></div>
+    <div class="prog-cta"><a class="btn js-bot js-cta" href="https://peoplenewtning.getplatinum.ru/payment/Zf0dOyv" target="_blank" rel="noopener">Принять участие · 1 490 ₽</a><p class="pay pay-u">Оплата картой любого банка и по СБП. Если платеж не проходит, напишите <a class="js-care" href="https://t.me/florise_irina" target="_blank" rel="noopener">@florise_irina</a>, решим за пять минут.</p></div>
   </div>
 </section>
 
@@ -528,8 +537,7 @@ section{padding-block:92px;position:relative}
       <p class="real">Подкаст дня можно слушать в дороге, на задания нужно 5–10 минут в день. Все материалы и запись финального эфира остаются у вас еще две недели после окончания.</p>
       <p class="moment"><b>Подготовка начинается сразу после оплаты.</b> Кто заходит раньше, тот приходит к 19 октября уже подготовленным.</p>
       <a class="btn wide js-bot js-cta" href="https://peoplenewtning.getplatinum.ru/payment/Zf0dOyv" target="_blank" rel="noopener">Принять участие · 1 490 ₽</a>
-      <a class="btn ghost wide js-tribw" href="https://web.tribute.tg/p/GMQ" target="_blank" rel="noopener" style="margin-top:12px">Оплатить через Tribute</a>
-      <p class="pay">Оплата картой любого банка и по СБП. Если платеж не проходит, напишите <a class="js-care" href="https://t.me/florise_irina" target="_blank" rel="noopener">@florise_irina</a>, решим за пять минут.<span class="js-tribw"> Удобнее в Telegram? <a class="js-trib" href="https://web.tribute.tg/p/GMQ" target="_blank" rel="noopener">Оплатить через Tribute</a>.</span></p>
+      <p class="pay">Оплата картой любого банка и по СБП. Если платеж не проходит, напишите <a class="js-care" href="https://t.me/florise_irina" target="_blank" rel="noopener">@florise_irina</a>, решим за пять минут.</p>
       <p class="friend">Идете вдвоем? Второе место за 990 ₽. <a class="js-care" href="https://t.me/florise_irina" target="_blank" rel="noopener">Напишите нам</a>, пришлем ссылку.</p>
       <p class="note">Старт 19 октября.</p>
     </div>
@@ -589,6 +597,14 @@ section{padding-block:92px;position:relative}
   </div>
 </footer>
 <div class="lb" id="lb" role="dialog" aria-label="Отзыв крупно"><img alt=""></div>
+<div class="paym" id="paym" role="dialog" aria-modal="true" aria-label="Выбор способа оплаты"><div class="paym-box">
+  <button class="paym-x" type="button" aria-label="Закрыть">&times;</button>
+  <h3>Как вам удобнее оплатить?</h3>
+  <p>Денежный практикум · <span class="js-mprice">1 490</span> ₽</p>
+  <a class="btn" id="pay-ru" href="https://peoplenewtning.getplatinum.ru/payment/Zf0dOyv" target="_blank" rel="noopener">Оплатить картой РФ</a>
+  <a class="btn ghost" id="pay-nr" href="https://web.tribute.tg/p/GMQ" target="_blank" rel="noopener">Оплатить картой не РФ</a>
+  <p class="paym-note">Если платеж не проходит, напишите <a class="js-care" href="https://t.me/florise_irina" target="_blank" rel="noopener">@florise_irina</a></p>
+</div></div>
 <div class="sticky"><a class="btn js-bot js-cta" href="https://peoplenewtning.getplatinum.ru/payment/Zf0dOyv" target="_blank" rel="noopener">Принять участие · 1 490 ₽</a></div>
 </div>
 
@@ -621,7 +637,16 @@ section{padding-block:92px;position:relative}
     document.querySelectorAll('.js-cta').forEach(function(a){a.textContent='Вход закрыт · написать команде';a.href=care;});
     document.querySelectorAll('.pay,.friend').forEach(function(e){e.hidden=true;});
   }
-  if(high||closed){document.querySelectorAll('.js-tribw').forEach(function(e){e.style.display='none';});}
+
+  // ВЫБОР ОПЛАТЫ: РФ (Getplatinum) или не РФ (Tribute)
+  var pm=document.getElementById('paym');
+  if(high){document.querySelectorAll('.js-mprice').forEach(function(e){e.textContent='1 990';});var nr=document.getElementById('pay-nr');nr.href=care;nr.textContent='Картой не РФ · написать нам';}
+  document.getElementById('pay-ru').href=bot;
+  function closePm(){pm.classList.remove('on');}
+  if(!closed){document.querySelectorAll('.js-cta').forEach(function(a){a.addEventListener('click',function(e){e.preventDefault();pm.classList.add('on');});});}
+  pm.addEventListener('click',function(e){if(e.target===pm||e.target.classList.contains('paym-x'))closePm();});
+  pm.querySelectorAll('#pay-ru,#pay-nr').forEach(function(a){a.addEventListener('click',function(){setTimeout(closePm,300);});});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')closePm();});
   var cnt=parseInt(page.getAttribute('data-count'),10)||0;
   if(cnt>=50){var c1=document.querySelector('.js-count');c1.textContent='Нас уже '+cnt;c1.hidden=false;}
   if(cnt>200){var c2=document.querySelector('.js-count-hero');c2.textContent='Нас уже '+cnt;c2.hidden=false;}
