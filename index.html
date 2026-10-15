@@ -1,5 +1,5 @@
 <!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><!--fresh--><meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"><meta http-equiv="Pragma" content="no-cache"><meta http-equiv="Expires" content="0">
-<script>(function(){var V="20261012224047";function chk(){try{fetch("version.txt?t="+Date.now(),{cache:"no-store"}).then(function(r){return r.ok?r.text():""}).then(function(t){t=(t||"").trim();if(!t||t===V)return;var k="fr_"+t;try{if(sessionStorage.getItem(k))return;sessionStorage.setItem(k,1)}catch(e){}var u=new URL(location.href);u.searchParams.set("v",t);location.replace(u.toString())}).catch(function(){})}catch(e){}}chk();document.addEventListener("visibilitychange",function(){if(!document.hidden)chk()});window.addEventListener("pageshow",function(e){if(e.persisted)chk()})})();</script><!--/fresh-->
+<script>(function(){var V="20261015203959";function chk(){try{fetch("version.txt?t="+Date.now(),{cache:"no-store"}).then(function(r){return r.ok?r.text():""}).then(function(t){t=(t||"").trim();if(!t||t===V)return;var k="fr_"+t;try{if(sessionStorage.getItem(k))return;sessionStorage.setItem(k,1)}catch(e){}var u=new URL(location.href);u.searchParams.set("v",t);location.replace(u.toString())}).catch(function(){})}catch(e){}}chk();document.addEventListener("visibilitychange",function(){if(!document.hidden)chk()});window.addEventListener("pageshow",function(e){if(e.persisted)chk()})})();</script><!--/fresh-->
 <meta name="theme-color" content="#240610">
 <title>Денежный практикум Ирины Гребенюковой</title>
 <meta name="description" content="Неделя с Ириной Гребенюковой, чтоб научиться сохранять и приумножать доход. Практикум 19–25 октября, финальный эфир 26 октября.">
@@ -523,7 +523,7 @@ section{padding-block:92px;position:relative}
       <p class="count js-count" hidden></p>
       <div class="bonus">
         <p class="js-until" data-until="2026-10-14"><b>1&nbsp;490&nbsp;₽ до 14 октября</b>, с 15 октября 1&nbsp;990&nbsp;₽</p>
-        <p class="js-from" data-from="2026-10-15" hidden><b>Вход открыт до 18 октября, 21:00 мск</b></p>
+        <p class="js-from" data-from="2026-10-15" hidden><b>1&nbsp;990&nbsp;₽ до старта 19 октября</b></p>
       </div>
 
       <ul class="incl">
@@ -602,7 +602,7 @@ section{padding-block:92px;position:relative}
   <h3>Как вам удобнее оплатить?</h3>
   <p>Денежный практикум · <span class="js-mprice">1 490</span> ₽</p>
   <a class="btn" id="pay-ru" href="https://peoplenewtning.getplatinum.ru/payment/Zf0dOyv" target="_blank" rel="noopener">Оплатить картой РФ</a>
-  <a class="btn ghost" id="pay-nr" href="https://t.me/c/4418670663/1/6045" target="_blank" rel="noopener">Оплатить картой не РФ</a>
+  <a class="btn ghost" id="pay-nr" href="https://web.tribute.tg/p/GQJ" target="_blank" rel="noopener">Оплатить картой не РФ</a>
   <p class="paym-note">Если платеж не проходит, напишите <a class="js-care" href="https://t.me/florise_irina" target="_blank" rel="noopener">@florise_irina</a></p>
 </div></div>
 <div class="sticky"><a class="btn js-bot js-cta" href="https://peoplenewtning.getplatinum.ru/payment/Zf0dOyv" target="_blank" rel="noopener">Принять участие · 1 490 ₽</a></div>
@@ -631,7 +631,7 @@ section{padding-block:92px;position:relative}
   }
   if(today>='2026-10-13'&&today<='2026-10-14'){document.querySelectorAll('.js-cta').forEach(function(a){a.textContent='Успеть по 1 490 ₽ до 14 октября';});}
   if(today>='2026-10-12'&&today<='2026-10-14'){dl.innerHTML='<b>Последние дни по 1&nbsp;490&nbsp;₽</b>, с 15 октября 1&nbsp;990&nbsp;₽';}
-  else if(today>='2026-10-15'&&!closed){dl.innerHTML='<b>1&nbsp;990&nbsp;₽</b>, вход до 18 октября, 21:00 мск';}
+  else if(today>='2026-10-15'&&!closed){dl.innerHTML='<b>1&nbsp;990&nbsp;₽</b> до старта 19 октября';}
   else if(closed){
     dl.innerHTML=today<='2026-10-18'?'<b>Вход закрыт.</b> Старт завтра':(today==='2026-10-19'?'<b>Сегодня старт практикума</b>':(today<'2026-10-26'?'<b>Практикум идет</b>':(today==='2026-10-26'?'<b>Сегодня финальный эфир «Денежный урожай»</b>':'<b>Практикум завершен</b>')));
     document.querySelectorAll('.js-cta').forEach(function(a){a.textContent='Вход закрыт · написать команде';a.href=care;});
@@ -640,7 +640,7 @@ section{padding-block:92px;position:relative}
 
   // ВЫБОР ОПЛАТЫ: РФ (Getplatinum) или не РФ (Tribute)
   var pm=document.getElementById('paym');
-  if(high){document.querySelectorAll('.js-mprice').forEach(function(e){e.textContent='1 990';});var nr=document.getElementById('pay-nr');nr.href=care;nr.textContent='Картой не РФ · написать нам';}
+  if(high){document.querySelectorAll('.js-mprice').forEach(function(e){e.textContent='1 990';});}
   document.getElementById('pay-ru').href=bot;
   function closePm(){pm.classList.remove('on');}
   if(!closed){document.querySelectorAll('.js-cta').forEach(function(a){a.addEventListener('click',function(e){e.preventDefault();pm.classList.add('on');});});}
